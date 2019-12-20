@@ -3,3 +3,5 @@
 A static web site for PsyanticY github project.
 
 #### thanks to https://www.youtube.com/watch?v=fJ-tUBJFM5w&t=390s
+
+### For live site: https://psyanticy.netlify.com/
