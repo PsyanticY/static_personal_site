@@ -90,3 +90,45 @@ a {
   align-items: center;
   background-color: rgba(34, 34, 34, 0.6);
 }
+
+.btn-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 17.55rem;
+}
+.btn-btn1 {
+  display: inline-block;
+  border: 1px solid #3498db;
+  background: none;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  font-family: "montserrat";
+  margin: 0.625rem;
+  color: #3498db;
+  cursor: pointer;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: var(--mainSpacing);
+}
+.btn-btn1:hover {
+  color: #fff;
+}
+
+.btn-btn1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn-btn1:hover::before {
+  height: 180%;
+}

@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    title: `PsyanticY`,
+    description: `portfolio`,
+    author: `github.com/PsyanticY`,
+    siteUrl: "https://psyanticy.netlify.com",
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

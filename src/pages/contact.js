@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Title from "../components/Title"
 import styles from "../css/contact.module.css"
+import {Link} from 'gatsby'
 const contact = () => {
   return (
     <Layout>
@@ -16,7 +17,14 @@ const contact = () => {
             You can also have a look at <a href="https://github.com/PsyanticY">my github</a>.
           </p>
         </article>
+        <div className="btn-container">
+        <Link to="/" className="btn-btn1">
+          Home Page
+        </Link>
+      </div>
       </section>
+
+
     </Layout>
   )
 }
