@@ -1,9 +1,10 @@
+
 module.exports = {
   siteMetadata: {
     title: `PsyanticY`,
-    description: `portfolio`,
-    author: `github.com/PsyanticY`,
-    siteUrl: "https://psyanticy.netlify.com",
+    description: `my stuff for learning`,
+    author: `PsyanticY`,
+    sourcePage: "https://psyanticy.netlify.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +27,13 @@ module.exports = {
           password: '',
         },
       },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+          spaceId: process.env.CONTENTFUL_SPACE_ID,
+          accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

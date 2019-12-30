@@ -19,4 +19,9 @@ export default [
     text: "contact",
     url: "/contact",
   },
+  {
+    id: Math.random(),
+    text: "notes",
+    url: "/notes",
+  },
 ]
