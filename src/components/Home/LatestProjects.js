@@ -6,17 +6,15 @@ import Title from '../Title'
 
 const query = graphql`
 {
-  allStrapiProject(sort: {order: DESC, fields: latest}, limit:6) {
+  allContentfulProjects(sort: {order: DESC, fields: published}, limit:6) {
     nodes {
       title
       description
       url
       id
       image {
-        childImageSharp {
-          fluid (maxWidth: 600){
-            ...GatsbyImageSharpFluid_withWebp
-          }
+        file {
+          url
         }
       }
     }
@@ -26,7 +24,7 @@ const query = graphql`
 //
 export const Projects = () => {
 
-    const {allStrapiProject:{nodes:projects}} = useStaticQuery(query)
+    const {allContentfulProjects:{nodes:projects}} = useStaticQuery(query)
     return (
         <section className={styles.projects}>
             <Title title="top" subtitle="projects"></Title>

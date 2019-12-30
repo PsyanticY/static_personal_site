@@ -19,6 +19,9 @@
 }
 .img {
   transition: var(--mainTransition);
+  max-width: 370px;
+  object-fit: cover;
+  width: 100%;
 }
 .img-container:hover .img {
   background: var(--primaryColor);

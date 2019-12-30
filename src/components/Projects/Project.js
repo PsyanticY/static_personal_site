@@ -3,16 +3,15 @@ import styles from '../../css/single-project.module.css'
 import Image from 'gatsby-image'
 
 const Project = ({title, url, description, image}) => {
-    const mainImage = image.childImageSharp.fluid;
-    console.log(mainImage);
+    const mainImage = image.file.url;
 
     return (<article className={styles.project}>
         <div className={styles.imgContainer}>
-            <Image
-                fluid={mainImage}
-                alt={title}
+            <img
+                src={mainImage}
+                alt={image.title}
                 className={styles.img}>
-            </Image>
+            </img>
             <a
                 href={url}
                 className={styles.link}
