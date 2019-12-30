@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import Title from "../components/Title"
 import styles from "../css/notes.module.css"
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Head from "../components/head"
+
 
 const Notes = () => {
 
@@ -22,6 +24,7 @@ const Notes = () => {
 
   return (
     <Layout >
+      <Head title="Notes"/>
       <section className={styles.notes}>
         <Title title="notes"></Title>
         <ol className={styles.olist}>
@@ -36,6 +39,11 @@ const Notes = () => {
                 )
             })}
         </ol>
+        <div className="btn-container">
+        <Link to="/" className="btn-btn1">
+          Home Page
+        </Link>
+      </div>
       </section>
 </Layout>
   )

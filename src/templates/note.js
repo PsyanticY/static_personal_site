@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import styles from "../css/notes.module.css"
-// import Head from "../components/head"
+import Head from "../components/head"
 
 export const query = graphql`
   query($slug: String!) {
@@ -32,7 +32,7 @@ const Note = props => {
   return (
     <Layout>
       <section className={styles.note}>
-        {/* <Head title={props.data.contentfulNotes.title}/> */}
+        <Head title={props.data.contentfulNotes.title}/>
         <div className={styles.noteDiv}>
             <h1>{props.data.contentfulNotes.title}</h1>
             <p>{props.data.contentfulNotes.publishedDate}</p>

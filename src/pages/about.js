@@ -3,10 +3,12 @@ import Layout from "../components/layout"
 import styles from "../css/about.module.css"
 import Title from "../components/Title"
 import {Link} from 'gatsby'
+import Head from "../components/head"
 
 const about = () => {
   return (
     <Layout>
+      <Head title="About"/>
       <section className={styles.about}>
         <Title title="about"></Title>
         <article className={styles.text}>

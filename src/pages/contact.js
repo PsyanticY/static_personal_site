@@ -3,9 +3,12 @@ import Layout from "../components/layout"
 import Title from "../components/Title"
 import styles from "../css/contact.module.css"
 import {Link} from 'gatsby'
+import Head from "../components/head"
+
 const contact = () => {
   return (
     <Layout>
+      <Head title="Contact"/>
       <section className={styles.contact}>
         <Title title="contact"></Title>
         <article className={styles.text}>
